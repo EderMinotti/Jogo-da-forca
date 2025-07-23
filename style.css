@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Goldman:wght@400;700&display=swap');
+
+:root {
+    --azul-de-fundo: #023859;
+    --azul-medio: #048ABF;
+    --azul-claro: #04B2D9;
+    --branco: #F2F2F2;
+    --fonte : "Bitcount", system-ui;
+    --fonte-secundaria: "Goldman", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--azul-de-fundo);
+    box-sizing: border-box;
+    font-family: var(--fonte-secundaria);
+    color: var(--branco);
+    font-size: 12px;
+    
+}
+
+.imagens-forca {
+    background-color: var(--azul-medio);
+    border-radius: 0 0 8px 8px;
+}
+
+.imagens-forca > h1 {
+    text-align: center;
+    font-family:  var(--fonte);
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--branco);
+    padding: 2rem 0;
+    border:  2px dashed var(--branco) ;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 1rem;
+}
+
+.play-game {
+    width: 100px;
+    margin: 40% auto;       
+}
+
+.botao-play {
+    border-radius: 100%;
+    border: none;
+}
+
+.botao-play > img {
+    margin-left: 10px;
+}
+
+.paragrafo-play {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    width: 100px;
+    margin: 1rem auto
+}
+
+.teclado {
+    display: none;
+}
+
+.container__botoes-teclado {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    height: 200px;
+    background-color: var(--azul-medio);
+    border-radius: 8px;
+    padding: 1rem 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.603);
+
+}
+
+.container__botoes-teclado > button {
+    font-family: var(--fonte-secundaria);
+    color: var(--azul-de-fundo);
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--branco);
+    box-shadow: 2px 2px 2px var(--azul-de-fundo);
+}
+
+.palavra-chave {
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    height: 100px;
+    align-items: center;
+    font-size: 35px;
+    margin-top: 2rem;
+}
+
+.dica {
+    font-size: 18px;
+    display: block;
+    white-space: normal;
+}
+
+.tela {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: none;
+}
+
+.tela.visivel {
+  display: block; /* ou block, dependendo da seção */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tentativas {
+    margin-top: 1rem;
+    font-size: 15px;  
+}
+
+.tentativas > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4px;
+}
+
+.fim-de-jogo {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0;
+    gap: 2rem;
+    background-color: var(--azul-medio);
+    border-radius: 8px;
+    padding-bottom: 2rem;
+}
+
+.fim-de-jogo > h2 {
+  font-size: 50px;
+  padding: 20px 40px;
+  color: white;
+  animation: pulsar 1.2s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1); /* cresce 10% */
+  }
+}
+
+.fim-de-jogo>button {
+    font-size: 30px;
+    border: 1px solid var(--branco);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: var(--fonte);
+    color: var(--branco);
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .imagens-forca img {
+        max-width: 300px;
+    }
+
+    .imagens-forca{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+    .teclado button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+        margin: 0 0.5rem;
+    }
+
+    .container__botoes-teclado {
+        max-width: 50%;
+        margin: 1rem auto;
+        
+    }
+
+    .palavra-chave,
+    .tentativas,
+    .fim-de-jogo {
+        font-size: 1.5rem;
+    }
+
+    .botao-play img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tentativas>div {
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .palavra-correta {
+        text-align: center;
+        font-size: 30px;
+    }
+}
