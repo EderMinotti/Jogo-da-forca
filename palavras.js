@@ -1,4 +1,5 @@
-const palavras = [{ palavra: "astrolábio", dica: "instrumento antigo usado para observar estrelas" },
+const palavras = [
+  { palavra: "astrolábio", dica: "instrumento usado para observar estrelas" },
   { palavra: "quimera", dica: "criatura mítica ou ideia fantasiosa" },
   { palavra: "metáfora", dica: "figura de linguagem que compara indiretamente" },
   { palavra: "criptografia", dica: "técnica de escrita secreta" },
