@@ -1,5 +1,4 @@
 const palavras = [
-  { palavra: "astrolábio", dica: "instrumento usado para observar estrelas" },
   { palavra: "quimera", dica: "criatura mítica ou ideia fantasiosa" },
   { palavra: "metáfora", dica: "figura de linguagem que compara indiretamente" },
   { palavra: "criptografia", dica: "técnica de escrita secreta" },
@@ -25,7 +24,6 @@ const palavras = [
   { palavra: "epifania", dica: "revelação súbita ou iluminação" },
   { palavra: "algoritmo", dica: "sequência lógica de passos" },
   { palavra: "aurora", dica: "fenômeno luminoso polar" },
-  { palavra: "catacumba", dica: "galeria subterrânea usada como sepultura" },
   { palavra: "neologismo", dica: "palavra inventada ou recente" },
   { palavra: "obscuro", dica: "difícil de entender ou ver" },
   { palavra: "axioma", dica: "verdade aceita sem provas" },
