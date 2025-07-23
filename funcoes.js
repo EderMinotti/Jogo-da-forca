@@ -139,6 +139,7 @@ function reiniciarJogo() {
 
     tentativas = 6;
     pontos = 0 ;
+    pontosJogo.innerText = `Pontos: ${pontos}`;
     const imagensForca = document.getElementById("boneco")
     imagensForca.src = "assets/boneco1.png"
     novaPalavra();
