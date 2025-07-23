@@ -53,11 +53,11 @@ function ativarTeclado() {
                 pontos++;                
                 let pontosJogo = sectionTentativas.querySelector(".pontos");
                 pontosJogo.innerText = `Pontos: ${pontos}`;
-                const imagensForca = document.getElementById("boneco")
-                imagensForca.src = "assets/boneco1.png"
+                const imagensForca = document.getElementById("boneco");
+                imagensForca.src = "assets/boneco1.png";
                 setTimeout(() => {
                     novaPalavra();
-                },2000)
+                },2000);
             
 
             }
