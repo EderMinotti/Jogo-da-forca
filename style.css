@@ -21,6 +21,7 @@ body {
     font-family: var(--fonte-secundaria);
     color: var(--branco);
     font-size: 12px;
+    overflow: hidden; 
     
 }
 
@@ -41,14 +42,22 @@ body {
     margin-bottom: 1rem;
 }
 
+
 .play-game {
     width: 100px;
-    margin: 40% auto;       
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+      
+
 
 .botao-play {
     border-radius: 100%;
     border: none;
+    margin-top: 2rem;
 }
 
 .botao-play > img {
@@ -91,6 +100,12 @@ body {
     background-color: var(--branco);
     box-shadow: 2px 2px 2px var(--azul-de-fundo);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 .palavra-chave {
     display: none;
@@ -179,11 +194,11 @@ body {
 
 @media screen and (min-width: 768px) {
     .imagens-forca img {
-        max-width: 300px;
+        max-width: 150px;
     }
 
     .imagens-forca{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
 
@@ -230,6 +245,6 @@ body {
     }
 
     .container__imagens>img {
-        width: 40%;
+        width: 50%;
     }
 }
