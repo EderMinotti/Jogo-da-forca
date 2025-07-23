@@ -246,7 +246,7 @@ body {
 }
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
     .container__imagens {
         display: flex;
         justify-content: center;
