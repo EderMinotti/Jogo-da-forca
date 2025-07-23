@@ -49,13 +49,16 @@ function ativarTeclado() {
                 mostrarTentativas();
             }
 
-            if (!tracinhosAtuais.includes("_")) {             // trabalhar nessa parte Hoje.....
+            if (!tracinhosAtuais.includes("_")) {             
                 pontos++;                
                 let pontosJogo = sectionTentativas.querySelector(".pontos");
                 pontosJogo.innerText = `Pontos: ${pontos}`;
                 const imagensForca = document.getElementById("boneco")
                 imagensForca.src = "assets/boneco1.png"
-                novaPalavra();
+                setTimeout(() => {
+                    novaPalavra();
+                },2000)
+            
 
             }
 
