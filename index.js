@@ -7,9 +7,8 @@ const palavraCorreta = sectionPalavraChave.querySelector(".palavra-correta");
 const dicaPalavra = sectionPalavraChave.querySelector(".dica");
 const sectionTentativas = document.querySelector(".tentativas");
 const sectionFimDeJogo = document.querySelector(".fim-de-jogo");
-const pontosJogo = sectionTentativas.querySelector(".pontos");
-
-
+const imagensForca = document.getElementById("boneco")
+let pontosJogo = sectionTentativas.querySelector(".pontos");
 let tentativas = 6;
 let palavraSorteada = "";
 let tracinhosAtuais = [];
