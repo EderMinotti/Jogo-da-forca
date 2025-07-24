@@ -30,6 +30,7 @@ function mostrarTeclado() {
 function ativarTeclado() {
     containerBotoes.querySelectorAll("button").forEach(botao => {
         botao.addEventListener("click", (evento) => {
+            evento.target.classList.add("invisivel")
             const letraClicada = evento.target.innerText.toLowerCase();
             let acertou = false;
 
@@ -110,6 +111,7 @@ function novaPalavra() {
     imagensForca.src = "assets/boneco1.png";
     tentativas = 6;
     mostrarTentativas();
+    removeInvisivel();
     const indice = sortearNumero()
     palavraSorteada = palavras[indice].palavra;
     tracinhosAtuais = palavraSorteada.split("").map(() => "_");
@@ -118,7 +120,6 @@ function novaPalavra() {
     dicaPalavra.innerText = palavras[indice].dica
     sectionPalavraChave.style.display = "flex";
     teclado.style.display = "flex";
-    
 
 
 
@@ -126,6 +127,7 @@ function novaPalavra() {
         sectionPalavraChave.classList.add("visivel");
         teclado.classList.add("visivel");
         sectionTentativas.classList.add("visivel");
+
 
     }, 10)
 }
@@ -151,3 +153,9 @@ function reiniciarJogo() {
    
 
 }
+
+function removeInvisivel() {
+    containerBotoes.querySelectorAll("button").forEach((botao) => {
+        botao.classList.remove("invisivel");
+    })
+};
