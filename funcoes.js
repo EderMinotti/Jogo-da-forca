@@ -38,7 +38,7 @@ function ativarTeclado() {
             palavraSorteada.split("").forEach((letra, index) => {
                 if (removerAcentos(letra) == removerAcentos(letraClicada)) {
                     tracinhosAtuais[index] = letra;
-                    acertou = true;    
+                    acertou = true;
                 }
                 palavraCorreta.innerText = tracinhosAtuais.join(" ");
 
@@ -49,49 +49,44 @@ function ativarTeclado() {
                 mostrarTentativas();
             }
 
-            if (!tracinhosAtuais.includes("_")) {             
-                pontos++;                
-                let pontosJogo = sectionTentativas.querySelector(".pontos");
+            if (!tracinhosAtuais.includes("_")) {
+                pontos++;
                 pontosJogo.innerText = `Pontos: ${pontos}`;
-                const imagensForca = document.getElementById("boneco");
-                imagensForca.src = "assets/boneco1.png";
                 setTimeout(() => {
                     novaPalavra();
-                },2000);
-            
+                }, 2000);
+
 
             }
 
             if (tentativas == 0) {
                 setTimeout(() => {
 
-                sectionPalavraChave.style.display = "none";
-                teclado.style.display = "none";
-                sectionFimDeJogo.style.display = "flex";
+                    sectionPalavraChave.style.display = "none";
+                    teclado.style.display = "none";
+                    sectionFimDeJogo.style.display = "flex";
 
-                },400)
-                
+                }, 400)
+
 
                 setTimeout(() => {
                     teclado.classList.remove(".visivel");
                     sectionPalavraChave.classList.remove("visivel");
-                    sectionFimDeJogo.classList.add("visivel"); 
-                },1000)
+                    sectionFimDeJogo.classList.add("visivel");
+                }, 1000)
 
-                sectionFimDeJogo.querySelector("button").addEventListener("click",() => {
+                sectionFimDeJogo.querySelector("button").addEventListener("click", () => {
                     reiniciarJogo();
-                })   
+                })
             }
 
-            
+
             if (tentativas == 3) {
-                const imagensForca = document.getElementById("boneco")
                 imagensForca.src = "assets/boneco2.png"
-                
+
             }
-            
+
             if (tentativas == 1) {
-                const imagensForca = document.getElementById("boneco")
                 imagensForca.src = "assets/boneco3.png"
             }
 
@@ -112,6 +107,7 @@ function mostrarTentativas() {
 }
 
 function novaPalavra() {
+    imagensForca.src = "assets/boneco1.png";
     tentativas = 6;
     mostrarTentativas();
     const indice = sortearNumero()
@@ -122,6 +118,7 @@ function novaPalavra() {
     dicaPalavra.innerText = palavras[indice].dica
     sectionPalavraChave.style.display = "flex";
     teclado.style.display = "flex";
+    
 
 
 
@@ -141,16 +138,16 @@ function removerAcentos(palavra) {
 function reiniciarJogo() {
 
     tentativas = 6;
-    pontos = 0 ;
+    pontos = 0;
     pontosJogo.innerText = `Pontos: ${pontos}`;
-    const imagensForca = document.getElementById("boneco")
-    imagensForca.src = "assets/boneco1.png"
-    novaPalavra();
+    imagensForca.src = "assets/boneco1.png";
     mostrarTentativas();
+    novaPalavra();
     
     sectionFimDeJogo.classList.remove("visivel");
     sectionFimDeJogo.style.display = "none";
-
-    novaPalavra();
     
+
+   
+
 }
