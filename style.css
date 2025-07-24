@@ -78,6 +78,10 @@ body {
     display: none;
 }
 
+.invisivel {
+    opacity: 0;
+}
+
 .container__botoes-teclado {
     display: flex;
     justify-content: center;
